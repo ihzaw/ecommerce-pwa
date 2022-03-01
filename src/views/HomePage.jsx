@@ -1,5 +1,6 @@
 import { StatusBar } from "../components/StatusBar";
 import { TopBar } from "../components/TopBar";
+import { SearchBar } from "../components/SearchBar";
 
 export const HomePage = ({ setPage }) => {
   return (
@@ -8,9 +9,11 @@ export const HomePage = ({ setPage }) => {
         <StatusBar />
       </div>
       <TopBar />
-      <button className="" onClick={() => setPage("Login")}>
-        Homepage
-      </button>
+      <div className="mt-[34px] px-[25px]">
+        <div className="text-[16px] leading-[20px] mb-[5px]">Hi, Andrea</div>
+        <div className="text-[24px] font-bold leading-[32px]">What are you looking for today?</div>
+      </div>
+      <SearchBar />
     </div>
   );
 };
