@@ -4,7 +4,7 @@ import { LoginPage } from "./views/LoginPage";
 
 function App() {
   return (
-    <div className="font-dmsans justify-center flex">
+    <div className="font-dmsans flex justify-center items-center h-screen w-screen">
         <LoginPage />
     </div>
   );
