@@ -1,10 +1,7 @@
-import { useState } from "react";
 import { Mail } from "../components/Mail";
 import { Lock } from '../components/Lock'
 
 export const InputBox = ({ type }) => {
-    
-
   return (
     <label className="flex items-center relative">
       <div className="flex items-center text-grey-primary font-dmsans absolute left-4">

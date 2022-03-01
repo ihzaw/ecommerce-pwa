@@ -2,22 +2,22 @@ import { StatusBar } from "../components/StatusBar";
 import { Header } from "../components/Header";
 import { InputBox } from "../components/Inputbox";
 import background from "../assets/image-10.png";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { AuthBtn } from "../components/AuthBtn";
 
-export const LoginPage = () => {
+export const LoginPage = ({ setPage }) => {
   const [isSignUp, setIsSignup] = useState(false);
 
   return (
-    <div className="h-screen w-screen relative flex justify-center">
+    <div className="h-[844px] w-[390px] relative flex justify-center">
       <img
         className="object-cover w-full h-full max-w-[912px]"
         src={background}
         alt="background"
       />
-      <div className={isSignUp ? "h-full grid grid-rows-5 max-w-xl absolute top-0 w-full" : "h-full grid grid-rows-2 max-w-xl absolute top-0 w-full"}>
-        <div>
-          <StatusBar />
+      <div className={isSignUp ? "grid grid-rows-5 max-w-xl absolute top-0 w-full h-full" : "grid grid-rows-2 max-w-xl absolute top-0 w-full h-full"}>
+        <div className="pt-3.5 pb-3 pl-[19.89px] pr-[18.26px]">
+          <StatusBar variant="white"/>
           <div className="flex justify-center">
             <Header />
           </div>
@@ -30,10 +30,10 @@ export const LoginPage = () => {
             <div className="my-[20px]">
               <InputBox type="Password" />
             </div>
-            {!isSignUp && <div className="flex font-dmsans justify-center text-sm hover:underline cursor-pointer text-white mb-[32px]">
+            {!isSignUp && <div className="flex justify-center text-sm hover:underline cursor-pointer text-white mb-[32px]">
               <div>Forgot Password</div>
             </div>}
-            <button className="bg-emerald h-[50px] rounded-[10px] w-full py-[15px] text-center mb-[24px]">
+            <button className="bg-emerald h-[50px] rounded-[10px] w-full py-[15px] text-center mb-[24px]" onClick={() => setPage('Home')}>
               <div className="font-bold text-white text-base">{isSignUp ? "Sign up" : "Sign in"}</div>
             </button>
             {isSignUp && <div className="flex justify-center mt-[42px]">

@@ -1,11 +1,15 @@
-import { useState } from "react";
 import "./App.css";
 import { LoginPage } from "./views/LoginPage";
+import { HomePage } from "./views/HomePage";
+import { useState } from "react";
 
 function App() {
+  const [page, setPage] = useState('Login')
+
   return (
     <div className="font-dmsans flex justify-center items-center h-screen w-screen">
-        <LoginPage />
+        {page === 'Login' && <LoginPage setPage={setPage} />}
+        {page === 'Home' && <HomePage setPage={setPage} />}
     </div>
   );
 }
