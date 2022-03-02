@@ -6,4 +6,4 @@
 - `npm run dev`
 
 ## github page :
-https://ihzaw.github.io/ecommerce-pwa/
+https://ihzaw.github.io/ecommerce-pwa/index.html
